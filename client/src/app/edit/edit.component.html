@@ -1,0 +1,41 @@
+	<div class="panel panel-default">
+  <div class="panel-heading">Edit the employee details here: </div>
+  <div class="panel-body">
+  <form class="form-horizontal" (submit)="updateEmployee()" ngNativeValidate>
+  <div class="form-group">
+    <label for="emp_name" class="col-sm-2 control-label">Full Name : </label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" [(ngModel)]="model.name" name="name" placeholder="Employee's Name" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="position" class="col-sm-2 control-label">Position : </label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" [(ngModel)]="model.position" name="position" placeholder="Employee's Position" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="department" class="col-sm-2 control-label">Department : </label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" [(ngModel)]="model.department" name="department" placeholder="Employee's Department" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="salary" class="col-sm-2 control-label">Salary : </label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" [(ngModel)]="model.salary" name="salary" placeholder="Employee's Salary" required>
+    </div>
+  </div>
+  
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+      <button type="submit" class="btn btn-success">Update</button>
+       <a class="btn btn-info" (click)="goBack()">Cancel</a>
+    </div>
+   
+  </div>
+</form>
+
+  </div>
+</div>
