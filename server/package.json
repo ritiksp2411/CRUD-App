@@ -1,5 +1,5 @@
 {
-  "name": "ems-mean1",
+  "name": "ritik",
   "version": "1.0.0",
   "description": "simple mean apps",
   "main": "server.js",
@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "sikandar abu rakib",
-  "license": "ISC",
+  "author": "ritiksp",
+  "license": "",
   "dependencies": {
     "body-parser": "^1.17.1",
     "cors": "^2.8.3",

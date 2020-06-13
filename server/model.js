@@ -2,8 +2,10 @@ var mongoose = require('mongoose');
 var empSchema = new mongoose.Schema({
     name: String,
     position : String,
-    department : String,
-    salary : String
+    CareerGoal : String,
+    salary : String,
+    Relocation : String,
+    WorkedFor : Number
 })
 
 var Employee = module.exports = mongoose.model('Employee', empSchema);

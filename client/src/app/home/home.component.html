@@ -7,7 +7,9 @@
 			<tr class="row-color">
 			  <td>Name</td>
 			  <td>Position</td>
-			  <td>Department</td>
+			  <td>CareerGoal</td>
+			  <td>Relocation</td>
+			  <td>WorkedFor</td>
 			  <td width="275" align="center">CRUD Operations</td>
 			</tr>
 		  </thead>
@@ -15,7 +17,9 @@
 			 <tr  *ngFor="let employee of employees | employeeFilter:searchTerm">
 				<td>{{employee.name}}</td>
 				<td>{{employee.position}}</td>
-				<td>{{employee.department}}</td>
+				<td>{{employee.CareerGoal}}</td>
+				<td>{{employee.Relocation}}</td>
+				<td>{{employee.WorkedFor}}</td>
 				<td width="275"> 
 					<a class="btn btn-info" routerLink="/show/{{employee._id}}">View</a> 
 					<a class="btn btn-success"  routerLink="/edit/{{employee._id}}">Edit</a>

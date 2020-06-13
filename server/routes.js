@@ -11,8 +11,10 @@ router.post('/', function(req, res){
     var newEmployee = {
         name: req.body.name,
         position : req.body.position,
-        department : req.body.department,
-        salary: req.body.salary
+        CareerGoal : req.body.CareerGoal,
+        salary: req.body.salary,
+        Relocation: req.body.Relocation,
+        WorkedFor: req.body.WorkedFor
     }
      Employee.addEmployee(newEmployee,function(err,employee){
          if(err) throw err;
@@ -23,8 +25,10 @@ router.post('/', function(req, res){
      var update = {
         name: req.body.name,
         position : req.body.position,
-        department : req.body.department,
-        salary: req.body.salary
+        CareerGoal : req.body.CareerGoal,
+        salary: req.body.salary,
+        Relocation: req.body.Relocation,
+        WorkedFor: req.body.WorkedFor
     }
      Employee.updateEmployee(req.params._id , update, function(err,employee){
          if(err) throw err;
