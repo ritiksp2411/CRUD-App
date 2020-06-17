@@ -1,0 +1,31 @@
+
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Search By Name"
+            style="width:300px" [(ngModel)]="searchTerm" />
+</div>
+<table class="table table-bordered">
+		  <thead>
+			<tr class="row-color">
+			  <td>Name</td>
+			  <td>Position</td>
+			  <td>CareerGoal</td>
+			  <td>Relocation</td>
+			  <td>WorkedFor</td>
+			  <td width="275" align="center">CRUD Operations</td>
+			</tr>
+		  </thead>
+		  <tbody>
+			 <tr  *ngFor="let employee of employees | employeeFilter:searchTerm">
+				<td>{{employee.name}}</td>
+				<td>{{employee.position}}</td>
+				<td>{{employee.CareerGoal}}</td>
+				<td>{{employee.Relocation}}</td>
+				<td>{{employee.WorkedFor}}</td>
+				<td width="275"> 
+					<a class="btn btn-info" routerLink="/show/{{employee._id}}">View</a> 
+					<a class="btn btn-success"  routerLink="/edit/{{employee._id}}">Edit</a>
+					<a class="btn btn-danger" (click)="deleteEmployee(employee._id)">Delete</a>
+				</td>
+			 </tr>
+		  </tbody>
+		</table>
